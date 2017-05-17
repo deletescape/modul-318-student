@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace UI
 {
-    public partial class MainUI : Form
+    public partial class MainUI : MaterialForm
     {
         public MainUI()
         {
             InitializeComponent();
+        }
+
+        private void MainUI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
