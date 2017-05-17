@@ -14,7 +14,7 @@ namespace UI
     {
         static Transport transport = new Transport();
 
-        public static void TextChanged(MaterialSingleLineTextField textField, ListBox autocompleteList)
+        internal static void TextChanged(MaterialSingleLineTextField textField, ListBox autocompleteList)
         {
             if (textField.Text.Length >= 3)
             {
@@ -41,7 +41,7 @@ namespace UI
             }
         }
 
-        public static void AutocompletionListDoubleClick(MaterialSingleLineTextField textField, ListBox autocompleteList)
+        internal static void AutocompletionListDoubleClick(MaterialSingleLineTextField textField, ListBox autocompleteList)
         {
             if (autocompleteList.SelectedItem != null)
             {
@@ -50,12 +50,12 @@ namespace UI
             }
         }
 
-        public static void AutocompletionListLeave(ListBox autocompleteList)
+        internal static void AutocompletionListLeave(ListBox autocompleteList)
         {
             autocompleteList.Visible = false;
         }
 
-        public static void TextFieldLeave(ListBox autocompleteList)
+        internal static void TextFieldLeave(ListBox autocompleteList)
         {
             if (!autocompleteList.Focused)
             {
@@ -63,7 +63,7 @@ namespace UI
             }
         }
 
-        public static void AutocompletionListKeyDown(MaterialSingleLineTextField textField, ListBox autocompleteList, Keys keyCode)
+        internal static void AutocompletionListKeyDown(MaterialSingleLineTextField textField, ListBox autocompleteList, Keys keyCode)
         {
             if(keyCode == Keys.Enter)
             {
@@ -79,7 +79,7 @@ namespace UI
             }
         }
 
-        public static void TextFieldKeyDown(MaterialSingleLineTextField textField, ListBox autocompleteList, Keys keyCode, Button acceptButton)
+        internal static void TextFieldKeyDown(MaterialSingleLineTextField textField, ListBox autocompleteList, Keys keyCode, Button acceptButton)
         {
             if(keyCode == Keys.Down && textField.Text.Length >= 3)
             {
