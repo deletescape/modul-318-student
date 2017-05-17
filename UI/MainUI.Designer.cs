@@ -60,6 +60,9 @@
             // 
             // tabControl
             // 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tpVerbindung);
             this.tabControl.Controls.Add(this.tpAbfahrtsmonitor);
             this.tabControl.Depth = 0;
@@ -229,6 +232,7 @@
             // 
             // btnSuchen
             // 
+            this.btnSuchen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSuchen.AutoSize = true;
             this.btnSuchen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSuchen.Depth = 0;
@@ -274,6 +278,7 @@
             // 
             // btnSuchen2
             // 
+            this.btnSuchen2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSuchen2.AutoSize = true;
             this.btnSuchen2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSuchen2.Depth = 0;
@@ -323,6 +328,9 @@
             // 
             // lstResult2
             // 
+            this.lstResult2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstResult2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chName,
