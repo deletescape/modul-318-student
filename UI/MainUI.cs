@@ -4,6 +4,7 @@ using SwissTransport;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Net;
+using MaterialSkin;
 
 namespace UI
 {
@@ -13,6 +14,11 @@ namespace UI
         public MainUI()
         {
             InitializeComponent();
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Indigo800, Primary.Indigo900, Primary.Pink700, Accent.Pink400, TextShade.WHITE);
         }
 
         private void MainUI_Load(object sender, EventArgs e)

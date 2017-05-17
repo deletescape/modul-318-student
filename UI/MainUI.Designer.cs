@@ -66,11 +66,11 @@
             this.tabControl.Controls.Add(this.tpVerbindung);
             this.tabControl.Controls.Add(this.tpAbfahrtsmonitor);
             this.tabControl.Depth = 0;
-            this.tabControl.Location = new System.Drawing.Point(-2, 93);
+            this.tabControl.Location = new System.Drawing.Point(-2, 106);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(656, 480);
+            this.tabControl.Size = new System.Drawing.Size(656, 469);
             this.tabControl.TabIndex = 0;
             // 
             // tpVerbindung
@@ -87,7 +87,7 @@
             this.tpVerbindung.Location = new System.Drawing.Point(4, 22);
             this.tpVerbindung.Name = "tpVerbindung";
             this.tpVerbindung.Padding = new System.Windows.Forms.Padding(3);
-            this.tpVerbindung.Size = new System.Drawing.Size(648, 454);
+            this.tpVerbindung.Size = new System.Drawing.Size(648, 443);
             this.tpVerbindung.TabIndex = 0;
             this.tpVerbindung.Text = "Verbindung";
             // 
@@ -124,6 +124,7 @@
             this.lstResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstResult.BackColor = System.Drawing.SystemColors.Window;
             this.lstResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chPlatform,
@@ -139,7 +140,7 @@
             this.lstResult.MouseState = MaterialSkin.MouseState.OUT;
             this.lstResult.Name = "lstResult";
             this.lstResult.OwnerDraw = true;
-            this.lstResult.Size = new System.Drawing.Size(655, 327);
+            this.lstResult.Size = new System.Drawing.Size(655, 316);
             this.lstResult.TabIndex = 4;
             this.lstResult.UseCompatibleStateImageBehavior = false;
             this.lstResult.View = System.Windows.Forms.View.Details;
@@ -380,7 +381,7 @@
             this.materialTabSelector1.Location = new System.Drawing.Point(-2, 64);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(655, 23);
+            this.materialTabSelector1.Size = new System.Drawing.Size(655, 36);
             this.materialTabSelector1.TabIndex = 1;
             this.materialTabSelector1.Text = "tabSelector";
             // 
@@ -388,7 +389,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 573);
+            this.ClientSize = new System.Drawing.Size(653, 575);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.tabControl);
             this.Name = "MainUI";
