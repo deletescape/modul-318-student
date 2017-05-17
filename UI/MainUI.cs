@@ -33,6 +33,19 @@ namespace UI
             }
         }
 
+        private void btnSuchen2_Click(object sender, EventArgs e)
+        {
+            lstResult2.Items.Clear();
+            string id = transport.GetStations(txtStation.Text).StationList[0].Id;
+            StationBoardRoot sbr = transport.GetStationBoard(txtStation.Text, id);
+            foreach (StationBoard sb in sbr.Entries)
+            {
+                String[] item = { sb.To, sb.Stop.Departure.ToString(), sb.Name, sb.Operator };
+                ListViewItem lvi = new ListViewItem(item);
+                lstResult2.Items.Add(lvi);
+            }
+        }
+
         private void txtAbfahrtsort_TextChanged(object sender, EventArgs e)
         {
             AutocompletionUtils.TextChanged(txtAbfahrtsort, lstAutocompleteAbfahrt);
@@ -91,6 +104,36 @@ namespace UI
         private void lstAutocompleteZiel_KeyDown(object sender, KeyEventArgs e)
         {
             AutocompletionUtils.AutocompletionListKeyDown(txtZielort, lstAutocompleteZiel, e.KeyCode);
+        }
+
+        private void txtStation_KeyDown(object sender, KeyEventArgs e)
+        {
+            AutocompletionUtils.TextFieldKeyDown(txtStation, lstAutocompleteStation, e.KeyCode, btnSuchen2);
+        }
+
+        private void lstAutocompleteStation_KeyDown(object sender, KeyEventArgs e)
+        {
+            AutocompletionUtils.AutocompletionListKeyDown(txtStation, lstAutocompleteStation, e.KeyCode);
+        }
+
+        private void lstAutocompleteStation_DoubleClick(object sender, EventArgs e)
+        {
+            AutocompletionUtils.AutocompletionListDoubleClick(txtStation, lstAutocompleteStation);
+        }
+
+        private void txtStation_Leave(object sender, EventArgs e)
+        {
+            AutocompletionUtils.TextFieldLeave(lstAutocompleteStation);
+        }
+
+        private void lstAutocompleteStation_Leave(object sender, EventArgs e)
+        {
+            AutocompletionUtils.AutocompletionListLeave(lstAutocompleteStation);
+        }
+
+        private void txtStation_TextChanged(object sender, EventArgs e)
+        {
+            AutocompletionUtils.TextChanged(txtStation, lstAutocompleteStation);
         }
     } 
 }
