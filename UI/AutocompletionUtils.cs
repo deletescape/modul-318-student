@@ -86,7 +86,10 @@ namespace UI
                 autocompleteList.Visible = true;
                 autocompleteList.Focus();
                 autocompleteList.SelectedIndex = 0;
-            } else if(keyCode == Keys.Enter)
+            }
+            // Workaround um mit Enter ein Button zu betätigen aber im
+            // Autocomplete Dropdown auf Enter reagieren zu können
+            else if(keyCode == Keys.Enter)
             {
                 acceptButton.PerformClick();
             }

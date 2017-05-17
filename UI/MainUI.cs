@@ -23,26 +23,46 @@ namespace UI
         private void btnSuchen_Click(object sender, EventArgs e)
         {
             lstResult.Items.Clear();
-            foreach(Connection conn in transport.GetConnections(txtAbfahrtsort.Text, txtZielort.Text).ConnectionList)
+            if (txtAbfahrtsort.Text != "" && txtZielort.Text != "")
             {
-                DateTime departure = DateTime.Parse(conn.From.Departure);
-                DateTime arrival = DateTime.Parse(conn.To.Arrival);
-                String[] item = {  conn.From.Platform, departure.ToString(), arrival.ToString(), conn.Duration };
-                ListViewItem lvi = new ListViewItem(item);
-                lstResult.Items.Add(lvi);
+                try
+                {
+                    foreach (Connection conn in transport.GetConnections(txtAbfahrtsort.Text, txtZielort.Text).ConnectionList)
+                    {
+                        DateTime departure = DateTime.Parse(conn.From.Departure);
+                        DateTime arrival = DateTime.Parse(conn.To.Arrival);
+                        String[] item = { conn.From.Platform, departure.ToString(), arrival.ToString(), conn.Duration };
+                        ListViewItem lvi = new ListViewItem(item);
+                        lstResult.Items.Add(lvi);
+                    }
+                }
+                catch (WebException ex)
+                {
+                    MessageBox.Show($"Zu viele Anfragen an den Server\nBitte kurz warten befor sie fortfahren\n\n{ex}");
+                }
             }
         }
 
         private void btnSuchen2_Click(object sender, EventArgs e)
         {
             lstResult2.Items.Clear();
-            string id = transport.GetStations(txtStation.Text).StationList[0].Id;
-            StationBoardRoot sbr = transport.GetStationBoard(txtStation.Text, id);
-            foreach (StationBoard sb in sbr.Entries)
+            if (txtStation.Text != "")
             {
-                String[] item = { sb.To, sb.Stop.Departure.ToString(), sb.Name, sb.Operator };
-                ListViewItem lvi = new ListViewItem(item);
-                lstResult2.Items.Add(lvi);
+                try
+                {
+                    string id = transport.GetStations(txtStation.Text).StationList[0].Id;
+                    StationBoardRoot sbr = transport.GetStationBoard(txtStation.Text, id);
+                    foreach (StationBoard sb in sbr.Entries)
+                    {
+                        String[] item = { sb.Name, sb.To, sb.Stop.Departure.ToString(), sb.Operator };
+                        ListViewItem lvi = new ListViewItem(item);
+                        lstResult2.Items.Add(lvi);
+                    }
+                }
+                catch (WebException ex)
+                {
+                    MessageBox.Show($"Zu viele Anfragen an den Server\nBitte kurz warten befor sie fortfahren\n\n{ex}");
+                }
             }
         }
 

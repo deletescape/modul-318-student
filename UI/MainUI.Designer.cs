@@ -325,9 +325,9 @@
             // 
             this.lstResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstResult2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chName,
             this.chNach,
             this.chAbfahrt,
-            this.chName,
             this.chOperator});
             this.lstResult2.Depth = 0;
             this.lstResult2.Font = new System.Drawing.Font("Roboto", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
@@ -338,7 +338,7 @@
             this.lstResult2.MouseState = MaterialSkin.MouseState.OUT;
             this.lstResult2.Name = "lstResult2";
             this.lstResult2.OwnerDraw = true;
-            this.lstResult2.Size = new System.Drawing.Size(645, 374);
+            this.lstResult2.Size = new System.Drawing.Size(652, 381);
             this.lstResult2.TabIndex = 0;
             this.lstResult2.UseCompatibleStateImageBehavior = false;
             this.lstResult2.View = System.Windows.Forms.View.Details;
