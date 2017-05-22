@@ -7,6 +7,7 @@ using MaterialSkin.Controls;
 using System.Windows.Forms;
 using SwissTransport;
 using System.Net;
+using System.Diagnostics;
 
 namespace UI
 {
@@ -92,6 +93,17 @@ namespace UI
             else if(keyCode == Keys.Enter)
             {
                 acceptButton.PerformClick();
+            }
+        }
+        
+        internal static void OpenStationInGmaps(String station)
+        {
+            var stationList = transport.GetStations(station).StationList;
+            if (stationList.Count > 0)
+            {
+                var coordinates = stationList[0].Coordinate;
+                string googleUrl = "https://www.google.ch/maps/?q=loc:" + coordinates.XCoordinate + "+" + coordinates.YCoordinate;
+                Process.Start(googleUrl);
             }
         }
     }

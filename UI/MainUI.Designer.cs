@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tpVerbindung = new System.Windows.Forms.TabPage();
             this.lstAutocompleteZiel = new System.Windows.Forms.ListBox();
@@ -48,11 +49,12 @@
             this.txtStation = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblStation = new MaterialSkin.Controls.MaterialLabel();
             this.lstResult2 = new MaterialSkin.Controls.MaterialListView();
+            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chNach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chAbfahrt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chOperator = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.ttpLocation = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl.SuspendLayout();
             this.tpVerbindung.SuspendLayout();
             this.tpAbfahrtsmonitor.SuspendLayout();
@@ -217,6 +219,8 @@
             this.lblZielort.Size = new System.Drawing.Size(53, 19);
             this.lblZielort.TabIndex = 2;
             this.lblZielort.Text = "Zielort";
+            this.ttpLocation.SetToolTip(this.lblZielort, "Zeige den Zielort auf Google Maps\r\n");
+            this.lblZielort.Click += new System.EventHandler(this.lblZielort_Click);
             // 
             // lblAbfahrtsort
             // 
@@ -230,6 +234,8 @@
             this.lblAbfahrtsort.Size = new System.Drawing.Size(85, 19);
             this.lblAbfahrtsort.TabIndex = 1;
             this.lblAbfahrtsort.Text = "Abfahrtsort";
+            this.ttpLocation.SetToolTip(this.lblAbfahrtsort, "Zeige den Abfahrtsort auf Google Maps");
+            this.lblAbfahrtsort.Click += new System.EventHandler(this.lblAbfahrtsort_Click);
             // 
             // btnSuchen
             // 
@@ -259,7 +265,7 @@
             this.tpAbfahrtsmonitor.Location = new System.Drawing.Point(4, 22);
             this.tpAbfahrtsmonitor.Name = "tpAbfahrtsmonitor";
             this.tpAbfahrtsmonitor.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAbfahrtsmonitor.Size = new System.Drawing.Size(648, 454);
+            this.tpAbfahrtsmonitor.Size = new System.Drawing.Size(648, 443);
             this.tpAbfahrtsmonitor.TabIndex = 1;
             this.tpAbfahrtsmonitor.Text = "Abfahrtsmonitor";
             // 
@@ -326,6 +332,8 @@
             this.lblStation.Size = new System.Drawing.Size(57, 19);
             this.lblStation.TabIndex = 1;
             this.lblStation.Text = "Station";
+            this.ttpLocation.SetToolTip(this.lblStation, "Zeige die Station auf Google Maps\r\n");
+            this.lblStation.Click += new System.EventHandler(this.lblStation_Click);
             // 
             // lstResult2
             // 
@@ -352,6 +360,11 @@
             this.lstResult2.UseCompatibleStateImageBehavior = false;
             this.lstResult2.View = System.Windows.Forms.View.Details;
             // 
+            // chName
+            // 
+            this.chName.Text = "Name";
+            this.chName.Width = 97;
+            // 
             // chNach
             // 
             this.chNach.Text = "Nach";
@@ -361,11 +374,6 @@
             // 
             this.chAbfahrt.Text = "Abfahrt";
             this.chAbfahrt.Width = 118;
-            // 
-            // chName
-            // 
-            this.chName.Text = "Name";
-            this.chName.Width = 97;
             // 
             // chOperator
             // 
@@ -384,6 +392,10 @@
             this.materialTabSelector1.Size = new System.Drawing.Size(655, 36);
             this.materialTabSelector1.TabIndex = 1;
             this.materialTabSelector1.Text = "tabSelector";
+            // 
+            // ttpLocation
+            // 
+            this.ttpLocation.ToolTipTitle = "Standort";
             // 
             // MainUI
             // 
@@ -431,6 +443,7 @@
         private System.Windows.Forms.ColumnHeader chAbfahrt;
         private System.Windows.Forms.ColumnHeader chName;
         private System.Windows.Forms.ColumnHeader chOperator;
+        private System.Windows.Forms.ToolTip ttpLocation;
     }
 }
 

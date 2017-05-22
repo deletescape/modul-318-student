@@ -160,5 +160,20 @@ namespace UI
         {
             AutocompletionUtils.TextChanged(txtStation, lstAutocompleteStation);
         }
+
+        private void lblAbfahrtsort_Click(object sender, EventArgs e)
+        {
+            AutocompletionUtils.OpenStationInGmaps(txtAbfahrtsort.Text);
+        }
+
+        private void lblZielort_Click(object sender, EventArgs e)
+        {
+            AutocompletionUtils.OpenStationInGmaps(txtZielort.Text);
+        }
+
+        private void lblStation_Click(object sender, EventArgs e)
+        {
+            AutocompletionUtils.OpenStationInGmaps(txtStation.Text);
+        }
     } 
 }
