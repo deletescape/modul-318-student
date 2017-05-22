@@ -56,8 +56,7 @@ namespace UI
             {
                 try
                 {
-                    string id = transport.GetStations(txtStation.Text).StationList[0].Id;
-                    StationBoardRoot sbr = transport.GetStationBoard(txtStation.Text, id);
+                    StationBoardRoot sbr = transport.GetStationBoard(txtStation.Text);
                     foreach (StationBoard sb in sbr.Entries)
                     {
                         String[] item = { sb.Name, sb.To, sb.Stop.Departure.ToString(), sb.Operator };
