@@ -12,7 +12,7 @@ namespace UI
 {
     class AutocompletionUtils
     {
-        static Transport transport = new Transport();
+        static ITransport transport = new Transport();
 
         internal static void TextChanged(MaterialSingleLineTextField textField, ListBox autocompleteList)
         {

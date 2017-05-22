@@ -10,7 +10,7 @@ namespace UI
 {
     public partial class MainUI : MaterialForm
     {
-        Transport transport;
+        ITransport transport;
         public MainUI()
         {
             InitializeComponent();
