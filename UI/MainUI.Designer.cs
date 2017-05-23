@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUI));
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tpVerbindung = new System.Windows.Forms.TabPage();
             this.lstAutocompleteZiel = new System.Windows.Forms.ListBox();
@@ -404,6 +405,7 @@
             this.ClientSize = new System.Drawing.Size(653, 575);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.tabControl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainUI";
             this.Text = "ÖVÖ";
             this.Load += new System.EventHandler(this.MainUI_Load);

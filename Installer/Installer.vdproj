@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C38E1AFC08454A8A8F291E43953784A4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D01DC584AC3E37C186B710AC99CE9061"
         "OwnerKey" = "8:_ABF52AA67FF74FF8B0698FCB92E543D7"
         "MsmSig" = "8:_UNDEFINED"
@@ -58,13 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_ABF52AA67FF74FF8B0698FCB92E543D7"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_12D2E121149D98F31FE812AB44FD4270"
+        "OwnerKey" = "8:_9DDDE26F52F0989ADC0C6FE154868881"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9DDDE26F52F0989ADC0C6FE154868881"
+        "OwnerKey" = "8:_12D2E121149D98F31FE812AB44FD4270"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_ABF52AA67FF74FF8B0698FCB92E543D7"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -97,6 +103,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -113,6 +127,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -149,11 +171,6 @@
             "AssemblyAsmDisplayName" = "8:SwissTransport, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_12D2E121149D98F31FE812AB44FD4270"
-                    {
-                    "Name" = "8:SwissTransport.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:SwissTransport.dll"
             "TargetName" = "8:"
@@ -180,11 +197,6 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_70EA0F115E10C3B296D16DE515A0409B"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -211,11 +223,6 @@
             "AssemblyAsmDisplayName" = "8:MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_9DDDE26F52F0989ADC0C6FE154868881"
-                    {
-                    "Name" = "8:MaterialSkin.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:MaterialSkin.dll"
             "TargetName" = "8:"
@@ -235,6 +242,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C38E1AFC08454A8A8F291E43953784A4"
+            {
+            "SourcePath" = "8:..\\icon\\oevoe.ico"
+            "TargetName" = "8:oevoe.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_E4D8A3F61CAE4284BB1D36883A8855ED"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D01DC584AC3E37C186B710AC99CE9061"
             {
             "AssemblyRegister" = "3:1"
@@ -242,11 +269,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_D01DC584AC3E37C186B710AC99CE9061"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -454,7 +476,7 @@
             "Target" = "8:_ABF52AA67FF74FF8B0698FCB92E543D7"
             "Folder" = "8:_FD60F703B0B548619381C4BC0C377CF5"
             "WorkingFolder" = "8:_E4D8A3F61CAE4284BB1D36883A8855ED"
-            "Icon" = "8:"
+            "Icon" = "8:_C38E1AFC08454A8A8F291E43953784A4"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_44BFDE966F4540DD9B988A960AEC3332"
@@ -468,7 +490,7 @@
             "Target" = "8:_ABF52AA67FF74FF8B0698FCB92E543D7"
             "Folder" = "8:_B9AAB5ACB32B4A3E8DE5B9360655AEE9"
             "WorkingFolder" = "8:_E4D8A3F61CAE4284BB1D36883A8855ED"
-            "Icon" = "8:"
+            "Icon" = "8:_C38E1AFC08454A8A8F291E43953784A4"
             "Feature" = "8:"
             }
         }
