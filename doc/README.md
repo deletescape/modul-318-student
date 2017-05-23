@@ -27,16 +27,16 @@ Der Benutzer soll die Möglichkeit haben Stationen mithilfe von Live-Vorschlägen 
 
 ### Anforderungen
 
-|  ID  |  Umgesetzt | Kommentar
-| :--: | :--------: |
-| A001 |     Ja     |
-| A002 |     Ja     |
-| A003 |     Ja     |
-| A004 |     Ja     | Eigene Umsetzung mit ListBox für Integration im Material Design
-| A005 |     Nein   | Aufwand um diese Funktion mit dem Design zu vereinbaren wäre für den ÜK zu gross gewesen
-| A006 |     Ja     | Link zu Google Maps auf Field Label
-| A007 |     Nein   |
-| A008 |     Nein   |
+|  ID  | Umgesetzt | Kommentar                                                                                |
+|:----:|:---------:|------------------------------------------------------------------------------------------|
+| A001 |     Ja    |                                                                                          |
+| A002 |     Ja    |                                                                                          |
+| A003 |     Ja    |                                                                                          |
+| A004 |     Ja    | Eigene Umsetzung mit ListBox für Integration im Material Design                          |
+| A005 |    Nein   | Aufwand um diese Funktion mit dem Design zu vereinbaren wäre für den ÜK zu gross gewesen |
+| A006 |     Ja    | Link zu Google Maps auf Field Label                                                      |
+| A007 |    Nein   |                                                                                          |
+| A008 |    Nein   |                                                                                          |
 
 ### Eigene Features / Umsetzungen
 
@@ -101,6 +101,10 @@ Das Programm muss gestartet sein und der Verbindungs Tab selektiert sein. Intern
 |    2    | Im Dropdown den Eintrag Luzern Doppelt anklicken |       Das Dropdown schliesst sich und in der Textbox steht nun "Luzern"       |
 |    3    |        Auf das "Abfahrtsort" Label klicken       | Der Standardbrowser öffnet Google Maps mit einem Pin auf dem Luzerner Bahnhof |
 
+## Material Design
+
+Das ÖVÖ Programm ist im schönen und vorallem modernen [Material Design](https://material.io) von Google gehalten. Dies ist nur nöglich dank dem grossartigen [MaterialSkin](https://github.com/IgnaceMaes/MaterialSkin) von [Ignace Maes](http://ignacemaes.com).
+
 ## Use Cases
 
 ![Usecase Diagram](images/usecase.png)
@@ -111,14 +115,14 @@ Das Programm muss gestartet sein und der Verbindungs Tab selektiert sein. Intern
 
 ## Anforderungen
 
-|  ID  |  Beschreibung |
-| :--: | ---------- |
-| A001 |     Stationen können gesucht werden     |
-| A002 |     Die nächsten 4-5 Verbindung zwischen den gewählten Stationen werden angezeigt     |
-| A003 |     Alle Verbindungen von einer bestimmten Haltestelle als Abfahrtstafel sichtbar     |
-| A004 |     Während der Eingabe erscheinen bereits Suchvorschläge     | 
-| A005 |     Verbindungen könenn zu beliebigen Zeitpunkten gesucht werden   | 
-| A006 |     Es ist ersichtlich wo sich eine Station befindet     | 
-| A007 |     Es kann nach Haltestellen in der nähe gesucht werdem   |
-| A008 |     Gefundene Resultate können per Mail weitergeleitet werden   |
+|  ID  | Beschreibung                                                                  |
+|:----:|-------------------------------------------------------------------------------|
+| A001 | Stationen können gesucht werden                                               |
+| A002 | Die nächsten 4-5 Verbindung zwischen den gewählten Stationen werden angezeigt |
+| A003 | Alle Verbindungen von einer bestimmten Haltestelle als Abfahrtstafel sichtbar |
+| A004 | Während der Eingabe erscheinen bereits Suchvorschläge                         |
+| A005 | Verbindungen könenn zu beliebigen Zeitpunkten gesucht werden                  |
+| A006 | Es ist ersichtlich wo sich eine Station befindet                              |
+| A007 | Es kann nach Haltestellen in der nähe gesucht werdem                          |
+| A008 | Gefundene Resultate können per Mail weitergeleitet werden                     |
 
