@@ -126,3 +126,5 @@ Das ÖVÖ Programm ist im schönen und vorallem modernen [Material Design](https://
 | A007 | Es kann nach Haltestellen in der nähe gesucht werdem                          |
 | A008 | Gefundene Resultate können per Mail weitergeleitet werden                     |
 
+[Coding Guidelines](http://www.dofactory.com/reference/csharp-coding-standards)
+
